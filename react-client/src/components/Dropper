@@ -1,0 +1,61 @@
+import React from 'react';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
+import { scroller } from 'react-scroll';
+
+const styles = {
+  customWidth: {
+    width: 200,
+  },
+};
+
+class Dropper extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {value: 1};
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event, index, value) {
+    this.setState({value});
+  }
+
+
+  const scrollToElement = (element) => {
+        scroller.scrollTo(element,{
+            duration: 1500,
+            delay:100,
+            smooth: true,
+            offset: -150,
+            color: "black";
+        });
+        //props.onClose(false)
+    }
+    render(){
+      if( this.state.value == 1 ){
+        calendarDisplay = <smallBulk />;
+      }
+      else if( this.state.value == 2 ){
+        calendarDisplay = <mediumBulk />;
+      }
+      else if (this.state.value === 3 ){
+      calendarDisplay = <largeBulk />
+      }
+      else if (this.state.value === 4 ){
+      calendarDisplay = <extraLargeBulk />
+      }
+      return (
+        <div>
+          <DropDownMenu
+            value={this.state.displayValue}
+            onChange={this.handleChange}
+            style={styles.customWidth}
+            autoWidth={false}
+          >
+            <MenuItem value="100 130lbs" primaryText="100 130lbs" onClick=scrollToElement()/>
+            <MenuItem value="130 170lbs" primaryText="130 170lbs"/>
+            <MenuItem value="170 210lbs" primaryText="170 210lbs"/>
+            <MenuItem value="210 250lbs" primaryText="210 250lbs"/>
+          </DropDownMenu>
+        </div>
+    )}
+}
