@@ -32,17 +32,15 @@ class Dropper extends React.Component {
     }
     render(){
       if( this.state.value == 1 ){
-        calendarDisplay = <smallBulk />;
+        calendarDisplay = <basicShine />;
       }
       else if( this.state.value == 2 ){
-        calendarDisplay = <mediumBulk />;
+        calendarDisplay = <premiumShine />;
       }
       else if (this.state.value === 3 ){
-      calendarDisplay = <largeBulk />
+      calendarDisplay = <ultimateShine />
       }
-      else if (this.state.value === 4 ){
-      calendarDisplay = <extraLargeBulk />
-      }
+    
       return (
         <div>
           <DropDownMenu
@@ -51,10 +49,9 @@ class Dropper extends React.Component {
             style={styles.customWidth}
             autoWidth={false}
           >
-            <MenuItem value="100 130lbs" primaryText="100 130lbs" onClick=scrollToElement()/>
-            <MenuItem value="130 170lbs" primaryText="130 170lbs"/>
-            <MenuItem value="170 210lbs" primaryText="170 210lbs"/>
-            <MenuItem value="210 250lbs" primaryText="210 250lbs"/>
+            <MenuItem value="Basic Shine" primaryText="Basic Shine" onClick=scrollToElement()/>
+            <MenuItem value="Premium Shine" primaryText="Premiun Shine"/>
+            <MenuItem value="Ultimate Shine" primaryText="Ultimate Shine"/>
           </DropDownMenu>
         </div>
     )}

@@ -10,7 +10,7 @@ CREATE TABLE meals (
   diet LONGTEXT NOT NULL
 );
 
-INSERT INTO meals (weight, diet) VALUES ("110-130lbs", "CURRENT WEIGHT 110-130 lbs,
+INSERT INTO meals (weight, diet) VALUES ("Basic Shine", "CURRENT WEIGHT 110-130 lbs,
 
       Training Status
       Beginner
