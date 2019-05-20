@@ -12,9 +12,13 @@ var selectAll = function(callback) {
     if (err) {
       callback(err, null);
     } else {
-      callback(null, results);
+      callback(results);
     }
   });
 };
-
+var newfunc = function(err, results) {
+  console.log(results);
+  console.log(err);
+};
+selectAll(newfunc);
 module.exports.selectAll = selectAll;
