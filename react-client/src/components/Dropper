@@ -32,15 +32,15 @@ class Dropper extends React.Component {
     }
     render(){
       if( this.state.value == 1 ){
-        calendarDisplay = <basicShine />;
+        calendarDisplay = <BasicShine />;
       }
       else if( this.state.value == 2 ){
-        calendarDisplay = <premiumShine />;
+        calendarDisplay = <PremiumShine />;
       }
       else if (this.state.value === 3 ){
-      calendarDisplay = <ultimateShine />
+      calendarDisplay = <UltimateShine />
       }
-    
+
       return (
         <div>
           <DropDownMenu
