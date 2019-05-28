@@ -7,12 +7,11 @@ class NavbarInstance extends React.Component {
     return (
       <div>
         <ul>
-            <h2>Majestic Shine</h2>
+            <h2>Mirror Image Car-Spa & Detail Shop</h2>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/BasicShine'>Basic</Link></li>
-            <li><Link to='/PremiumShine'>Basic</Link></li>
-
-            
+            <li><Link to='/BasicShine'>BasicShine</Link></li>
+            <li><Link to='/PremiumShine'>PremiumShine</Link></li>
+            <li><Link to='/UltimateShine'>UltimateShine</Link></li>
         </ul>
       </div>
     );
@@ -20,4 +19,3 @@ class NavbarInstance extends React.Component {
 }
 
 export default NavbarInstance;
-

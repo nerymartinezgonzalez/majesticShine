@@ -7,8 +7,10 @@ ul {
   background-color: #333;
 }
 h2 {
-  position: absolute;
-  color: white; 
+  font-style: oblique;
+  font-size: 2.5em;
+  position: relative;
+  color: white;
 }
 li {
   float: right;
@@ -18,7 +20,7 @@ li a, .dropbtn {
   display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
   text-decoration: none;
 }
 
@@ -54,3 +56,11 @@ li.dropdown {
 }
 
 /* OTHER CSS FOR  */
+.x {
+ opacity: 0.5;
+ filter: alpha(opacity=30);
+ transform:scale(.70);
+ position: relative;
+ left:-21.2%;
+ margin-top: -100px;
+}

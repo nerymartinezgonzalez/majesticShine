@@ -4,7 +4,7 @@ class UltimateShine extends React.Component {
   render() {
     return (
       <div>
-        <h1 />
+          <img src={"./resources/basic.jpeg"} alt="shiny car" height="42" width="42"/>
       </div>
     );
   }
