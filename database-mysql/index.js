@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
 });
 
 var selectAll = function(callback) {
-  connection.query("SELECT * FROM meals", function(err, results, fields) {
+  connection.query("SELECT * FROM users", function(err, results, fields) {
     if (err) {
       callback(err, null);
     } else {
