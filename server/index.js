@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 // UNCOMMENT THE DATABASE YOU'D LIKE TO USE
-const items = require("../database-mysql");
-console.log(items);
+const db = require("../database-mysql/index.js");
+
 
 const app = express();
 app.use(
@@ -14,17 +14,20 @@ app.use(
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/../react-client/dist"));
 
-app.get("/List", (request, response) => {
-  console.log("here is my req", request.url);
-
-  response
+app.post("/users", function(request, response){
+  const {name, password} = request.body;
+  db.postUser(name, password, res => {
+    response
     .status(200)
-    .send(test)
-    .end();
-});
+    .send(res)
+    .end()
+  })
+}
 
-app.get("/items", function(req, res) {
-  items.selectAll(function(err, data) {
+);
+
+app.get("/db", function(req, res) {
+  db.selectAll(function(err, data) {
     if (err) {
       res.sendStatus(500);
     } else {

@@ -18,15 +18,16 @@ class UltimateShine extends React.Component {
     this.setState({
       [name]: value,
     });
+    console.log(this.state);
   }
 
    handleSubmit(e) {
     e.preventDefault();
     const { name, password } = this.state;
 
-    this.props.postData('/users', {
+    this.postData('/users', {
       name: name.toLowerCase(),
-      password,
+      password: password.toLowerCase()
     });
 
     this.setState({
@@ -44,7 +45,6 @@ class UltimateShine extends React.Component {
       body: JSON.stringify(data),
     })
     .then(response => response.json())
-    .then(() => this.getData(url))
     .catch(err => console.log(err))
   }
 
