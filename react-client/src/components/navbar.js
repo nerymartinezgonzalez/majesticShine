@@ -12,6 +12,8 @@ class NavbarInstance extends React.Component {
             <li><Link to='/BasicShine'>BasicShine</Link></li>
             <li><Link to='/PremiumShine'>PremiumShine</Link></li>
             <li><Link to='/UltimateShine'>UltimateShine</Link></li>
+            <li><Link to='/Unlimited'>Unlimited</Link></li>
+            <li><Link to='/Login'>Login</Link></li>
         </ul>
       </div>
     );
