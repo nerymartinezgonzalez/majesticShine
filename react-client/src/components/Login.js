@@ -4,7 +4,8 @@ class Login extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      name:""
+      name:"",
+      password:""
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,22 +23,38 @@ class Login extends React.Component {
 
    handleSubmit(e) {
     e.preventDefault();
-    const { name } = this.state;
+    const { name, password } = this.state;
 
     this.postData('/users', {
-      name: name.toLowerCase()
+      name: name.toLowerCase(),
+      password: password.toLowerCase()
     });
 
     this.setState({
-      name: ''
+      name: '',
+      password: '',
     });
   }
 
+  postData(url ='', data = {}) {
+    return fetch(url, {
+      method:'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .catch(err => console.log(err))
+  }
+
+
   render() {
-      const { name, } = this.state;
-    return (
-      <div>
-      <label>
+    const { name, password } = this.state;
+    const {addName, postData} = this.state;
+      return (
+        <div>
+          <label>
             Name:{' '}
             <input
               type="text"
@@ -46,10 +63,24 @@ class Login extends React.Component {
               onChange={this.handleInput}
             />
           </label>
-          <button onClick={this.handleInput}>submit </button>
-      </div>
-    )
-  }
-};
 
-export default Login
+          <br />
+          <label>
+            Password:{' '}
+            <input
+              type="text"
+              name="password"
+              value={password}
+              onChange={this.handleInput}
+            />
+          </label>
+
+          <br />
+          <button onClick={this.handleSubmit}>submit </button>
+        </div>
+      );
+    }
+  }
+
+
+export default Login;
