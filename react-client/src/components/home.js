@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from './footer.js';
 
 class Home extends React.Component {
 
@@ -66,8 +67,8 @@ class Home extends React.Component {
                     <td>5:30 AM</td>
                     <td>5:30 AM</td>
                     <td>5:30 AM</td>
-                    <td rowspan="4">9:00 AM</td>
-                    <td rowspan="4">None</td>
+                    <td rowSpan="4">9:00 AM</td>
+                    <td rowSpan="4">None</td>
                   </tr>
                   <tr>
                     <td>10:00 AM</td>
@@ -94,6 +95,7 @@ class Home extends React.Component {
               </table>
             </div>
           </section>
+          <Footer />
       </div>
     );
   }
