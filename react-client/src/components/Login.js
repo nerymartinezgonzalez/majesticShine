@@ -77,7 +77,14 @@ class Login extends React.Component {
 
           <br />
           <button onClick={this.handleSubmit}>submit </button>
+
+        <div>
+          <img className= "x" src="./resources/lambos2.jpg" alt="black_linconlContinnental"/>
         </div>
+        </div>
+
+
+
       );
     }
   }

@@ -18,6 +18,9 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "angular": "^1.6.3",
     "axios": "^0.18.0",
     "body-parser": "^1.19.0",
@@ -30,6 +33,7 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dev": "0.0.1",
     "react-dom": "^15.4.2",
+    "react-fontawesome": "^1.6.1",
     "react-router-dom": "^5.0.0",
     "react-scroll": "^1.7.11",
     "react-stripe-checkout": "^2.6.3",
